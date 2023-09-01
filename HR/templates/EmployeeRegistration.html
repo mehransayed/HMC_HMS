@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+
+{% block title%}Human Resource{%endblock title%}
+
+{% comment %} Resnder Body Start {% endcomment %}
+{% block body  %}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Employee Registration</h4>
+                    <form class="form-sample">
+                        <p class="card-description"> Personal info </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Emplyee Code</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">User Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="User Name" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                            <option>Mr.</option>
+                                            <option>Mrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input class="form-control" placeholder="Employee Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Last Name</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Father's \ Husband Name</label>
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                            <option>Mr.</option>
+                                            <option>Mrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input class="form-control" placeholder="Father's \ Husband Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Father's \ Husband Last Name</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" placeholder="Father's \ Husband Last Name" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Employee CNIC</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Employee CNIC" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Father's \ Husband CNIC</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Father's \ Husband CNIC" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Conatct No</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Conatct No" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Other Conatct No</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Other Conatct No" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Gender</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Joining Date</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="dd-mm-yyyy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Division</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">Administrator</option>
+                                            <option value="WY">Facility Management</option>
+                                            <option value="AM">Madical Services</option>
+                                            <option value="CA">Nursing Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Department</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">Administration</option>
+                                            <option value="WY">Ambulance</option>
+                                            <option value="AM">Bio Madical</option>
+                                            <option value="CA">Consultant Clinics</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Designation</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">Project Head</option>
+                                            <option value="WY">Office Boy</option>
+                                            <option value="AM">Project Enginess</option>
+                                            <option value="CA">COO</option>
+                                            <option value="RU">Pharmacist</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Grade</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">1</option>
+                                            <option value="WY">2</option>
+                                            <option value="AM">3</option>
+                                            <option value="CA">4</option>
+                                            <option value="RU">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Direct</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">Hafiz Murtaza | HOD</option>
+                                            <option value="WY">Raheel        | PGM</option>
+                                            <option value="AM">Rizwan        | GGM</option>
+                                            <option value="CA">Sharjeel Khan | HOD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">In-Direct</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%">
+                                            <option value="AL">Hafiz Murtaza | HOD</option>
+                                            <option value="WY">Raheel        | PGM</option>
+                                            <option value="AM">Rizwan        | GGM</option>
+                                            <option value="CA">Sharjeel Khan | HOD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-3">
+                                        <div class="form-check">
+                                            <label class="form-check-label form-check-success">
+                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked> Active
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-check form-check-danger">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2"> In-Active
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label"></label>
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                        <button class="btn btn-dark">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Records</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Product</th>
+                                    <th>Sale</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jacob</td>
+                                    <td>Photoshop</td>
+                                    <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
+                                    <td><label class="badge badge-danger">Pending</label></td>
+                                </tr>
+                                <tr>
+                                    <td>Messsy</td>
+                                    <td>Flash</td>
+                                    <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
+                                    <td><label class="badge badge-warning">In progress</label></td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Premier</td>
+                                    <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
+                                    <td><label class="badge badge-info">Fixed</label></td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>After effects</td>
+                                    <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
+                                    <td><label class="badge badge-success">Completed</label></td>
+                                </tr>
+                                <tr>
+                                    <td>Dave</td>
+                                    <td>53275535</td>
+                                    <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
+                                    <td><label class="badge badge-warning">In progress</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        
+
+        {% endblock  %}
