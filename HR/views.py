@@ -29,3 +29,8 @@ def Designation(request):
 def Grade(request):
     params = {'Name':'Mansoor', 'Place':'Hyd'}
     return render(request, 'Grade.html')
+
+
+def Grade1(request):
+    params = {'Name':'Mansoor', 'Place':'Hyd'}
+    return render(request, 'Grade.html')
