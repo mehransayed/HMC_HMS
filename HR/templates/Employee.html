@@ -1,4 +1,4 @@
-﻿{% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block title%}Human Resource{%endblock title%}
 
@@ -6,7 +6,7 @@
 {% block body  %}
 
 <div class="main-panel">
-    <div class="content-wrapper">
+    <div class="content-wrapper"> 
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -15,10 +15,10 @@
                             <h4 class="card-title">Records</h4>
                         </div>
                         <div class="col-md-6 text-end">
-                            <a href="/DivisionReg" class="btn btn-danger me-2">
+                            <a href="EmployeeReg" class="btn btn-danger me-2" style="font-weight: bold !important; ">
                                 <span class="menu-icon">
                                     <i class="mdi mdi-plus"></i>
-                                </span> Staff Category
+                                </span> Employee Registration
                             </a>
                         </div>
                     </div>
@@ -34,23 +34,43 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for item in messages %}
                                 <tr>
-                                    <td>{{item.Id}}</td>
-                                    <td>{{item.Name}}</td>
+                                    <td>Jacob</td>
+                                    <td>Photoshop</td>
                                     <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
                                     <td><label class="badge badge-danger">Pending</label></td>
                                 </tr>
-                                {% endfor %}
+                                <tr>
+                                    <td>Messsy</td>
+                                    <td>Flash</td>
+                                    <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
+                                    <td><label class="badge badge-warning">In progress</label></td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Premier</td>
+                                    <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
+                                    <td><label class="badge badge-info">Fixed</label></td>
+                                </tr>
+                                <tr>
+                                    <td>Peter</td>
+                                    <td>After effects</td>
+                                    <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
+                                    <td><label class="badge badge-success">Completed</label></td>
+                                </tr>
+                                <tr>
+                                    <td>Dave</td>
+                                    <td>53275535</td>
+                                    <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
+                                    <td><label class="badge badge-warning">In progress</label></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- content-wrapper ends -->
     <!-- partial:../../partials/_footer.html -->
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">

@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Employee Registration</h4>
-                    <form class="form-sample">
+                    <form class="form-sample" method="POST">
                         <p class="card-description"> Personal info </p>
                         <div class="row">
                             <div class="col-md-6">
@@ -139,7 +139,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Division</label>
+                                    <label class="col-sm-3 col-form-label">Staff Category</label>
                                     <div class="col-sm-9">
                                         <select class="form-control js-example-basic-single" style="width:100%">
                                             <option value="AL">Administrator</option>
@@ -247,7 +247,7 @@
                                     <label class="col-sm-3 col-form-label"></label>
                                     <div class="col-sm-3">
                                         <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                        <button class="btn btn-dark">Cancel</button>
+                                        <a href="/Employee" class="btn btn-dark">Cancel</a>
                                     </div>
                                 </div>
                             </div>
@@ -256,63 +256,15 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="col-lg-12 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Records</h4>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Product</th>
-                                    <th>Sale</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>Photoshop</td>
-                                    <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-danger">Pending</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Messsy</td>
-                                    <td>Flash</td>
-                                    <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
-                                <tr>
-                                    <td>John</td>
-                                    <td>Premier</td>
-                                    <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-info">Fixed</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>After effects</td>
-                                    <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
-                                    <td><label class="badge badge-success">Completed</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Dave</td>
-                                    <td>53275535</td>
-                                    <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
-                                    <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright HMC 2021</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="#" target="_blank">Bootstrap admin template</a> from HMC</span>
+        </div>
+    </footer>
+    <!-- partial -->
 </div>
 
-        
-
-        {% endblock  %}
+{% endblock  %}
