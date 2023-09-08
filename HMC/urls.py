@@ -1,0 +1,1 @@
+from django.contrib import adminfrom django.urls import path, includefrom HMC import viewsurlpatterns = [    path('', views.Login, name='Login'),        #HMC URLS    path('HMC', views.HMC, name='HMC'),    #path('EmployeeReg', views.EmpReg, name='EmpReg'),    #HR URLS    path('HR', include('HR.urls')),]

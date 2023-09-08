@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title%}Human Resource{%endblock title%}
+
+{% comment %} Resnder Body Start {% endcomment %}
+{% block body  %}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <!--<div class="page-header">
+            <h3 class="page-title">Staff Category</h3>
+        </div>-->
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Designation</h4>
+                        <p class="card-description"></p>
+                        {% if obj_des %}
+                        <form class="forms-sample" method="POST" action="{% url 'update_designation' obj_des.Id %}">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="exampleInputUsername2" class="col-sm-1 col-form-label">Name</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" value="{{obj_des.Designation}}" name="Designation" placeholder="Designation">
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-primary me-2" value="Update">
+                            <a href="/Designation" class="btn btn-dark">Cancel</a>
+                            {% if messages%}
+
+                            {% for message in messages %}
+
+                            <h2 style="color: green;">{{message}}</h2>
+                            {% endfor %}
+                            {% endif %}
+                        </form>
+
+                        {% else %}
+                        <form class="forms-sample" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="exampleInputUsername2" class="col-sm-1 col-form-label">Name</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" value="{{obj_des.Designation}}" name="Designation" placeholder="Designation">
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-primary me-2" value="Save">
+                            <a href="/Designation" class="btn btn-dark">Cancel</a>
+                            {% if messages%}
+
+                            {% for message in messages %}
+
+                            <h2 style="color: green;">{{message}}</h2>
+                            {% endfor %}
+                            {% endif %}
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright HMC 2021</span>
+            <span cla0ss="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="#" target="_blank">Bootstrap admin template</a> from HMC</span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+
+{% endblock  %}

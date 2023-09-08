@@ -11,22 +11,32 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Employee Registration</h4>
+                    <p class="card-description"></p>
                     <form class="form-sample" method="POST">
-                        <p class="card-description"> Personal info </p>
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Emplyee Code</label>
+                                    <label class="col-sm-3 col-form-label">Staff type</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" />
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="Stafftype">
+                                            <option value="1">Employee</option>
+                                            <option value="2">Consultant</option>
+                                            <option value="3">Employee / Consultant</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">User Name</label>
+                                    <label class="col-sm-3 col-form-label">Employement Type</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="User Name" />
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="EmployementType">
+                                            <option value="1">PT</option>
+                                            <option value="2">NFT</option>
+                                            <option value="3">FTP</option>
+                                            <option value="4">FTC</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -36,21 +46,21 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Name</label>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option>Mr.</option>
-                                            <option>Mrs</option>
+                                        <select class="form-control" name="EmployeeNameTitle">
+                                            <option value="Mr.">Mr.</option>
+                                            <option value="Mrs">Mrs</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-7">
-                                        <input class="form-control" placeholder="Employee Name" />
+                                        <input class="form-control" placeholder="Employee Name" name="EmployeeName" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Last Name</label>
+                                    <label class="col-sm-3 col-form-label">User Name</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" placeholder="Last Name" />
+                                        <input type="text" class="form-control" placeholder="User Name" name="UserName" />
                                     </div>
                                 </div>
                             </div>
@@ -60,21 +70,21 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Father's \ Husband Name</label>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option>Mr.</option>
-                                            <option>Mrs</option>
+                                        <select class="form-control" name="FatherHusbandNameTitle">
+                                            <option value="Mr.">Mr.</option>
+                                            <option value="Mrs">Mrs</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-7">
-                                        <input class="form-control" placeholder="Father's \ Husband Name" />
+                                        <input class="form-control" placeholder="Father's \ Husband Name" name="FatherHusbandName" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Father's \ Husband Last Name</label>
+                                    <label class="col-sm-3 col-form-label">Mother's Name</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" placeholder="Father's \ Husband Last Name" />
+                                        <input class="form-control" placeholder="Mother's Name" name="MotherName" />
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +94,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Employee CNIC</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Employee CNIC" />
+                                        <input type="text" class="form-control" placeholder="Employee CNIC" name="EmployeeCNIC" />
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +102,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Father's \ Husband CNIC</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Father's \ Husband CNIC" />
+                                        <input type="text" class="form-control" placeholder="Father's \ Husband CNIC" name="FatherHusbandCNIC" />
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +112,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Conatct No</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Conatct No" />
+                                        <input type="text" class="form-control" placeholder="Conatct No" name="ContactNo" />
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +120,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Other Conatct No</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Other Conatct No" />
+                                        <input type="text" class="form-control" placeholder="Other Conatct No" name="OtherConatctNo" />
                                     </div>
                                 </div>
                             </div>
@@ -120,9 +130,9 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Gender</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control">
-                                            <option>Male</option>
-                                            <option>Female</option>
+                                        <select class="form-control" name="Gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
                                         </select>
                                     </div>
                                 </div>
@@ -131,7 +141,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Joining Date</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="dd-mm-yyyy" />
+                                        <input type="text" class="form-control" placeholder="dd-mm-yyyy" name="JoiningDate" />
                                     </div>
                                 </div>
                             </div>
@@ -141,24 +151,50 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Staff Category</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">Administrator</option>
-                                            <option value="WY">Facility Management</option>
-                                            <option value="AM">Madical Services</option>
-                                            <option value="CA">Nursing Services</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="StaffCategory">
+                                            <option value="1">Clinical</option>
+                                            <option value="2">Non-Clinical</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Employee Type</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="EmployeeType">
+                                            <option value="1">Executive Management</option>
+                                            <option value="2">Middle Management</option>
+                                            <option value="3">Support Staff</option>
+                                            <option value="4">Auxilary Staff</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Department</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">Administration</option>
-                                            <option value="WY">Ambulance</option>
-                                            <option value="AM">Bio Madical</option>
-                                            <option value="CA">Consultant Clinics</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="Department">
+                                            <option value="1">Administration</option>
+                                            <option value="2">Ambulance</option>
+                                            <option value="3">Bio Madical</option>
+                                            <option value="4">Consultant Clinics</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Location</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="Location">
+                                            <option value="1">Administration</option>
+                                            <option value="2">Ambulance</option>
+                                            <option value="3">Bio Madical</option>
+                                            <option value="4">Consultant Clinics</option>
                                         </select>
                                     </div>
                                 </div>
@@ -169,26 +205,26 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Designation</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">Project Head</option>
-                                            <option value="WY">Office Boy</option>
-                                            <option value="AM">Project Enginess</option>
-                                            <option value="CA">COO</option>
-                                            <option value="RU">Pharmacist</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="Designation">
+                                            <option value="1">Project Head</option>
+                                            <option value="2">Office Boy</option>
+                                            <option value="3">Project Enginess</option>
+                                            <option value="4">COO</option>
+                                            <option value="5">Pharmacist</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Grade</label>
+                                    <label class="col-sm-3 col-form-label">Salary Grade</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">1</option>
-                                            <option value="WY">2</option>
-                                            <option value="AM">3</option>
-                                            <option value="CA">4</option>
-                                            <option value="RU">5</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="SalaryGrade">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
                                         </select>
                                     </div>
                                 </div>
@@ -197,51 +233,51 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Direct</label>
+                                    <label class="col-sm-3 col-form-label">Report Direct</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">Hafiz Murtaza | HOD</option>
-                                            <option value="WY">Raheel        | PGM</option>
-                                            <option value="AM">Rizwan        | GGM</option>
-                                            <option value="CA">Sharjeel Khan | HOD</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="ReportDirect">
+                                            <option value="1">Hafiz Murtaza | HOD</option>
+                                            <option value="2">Raheel        | PGM</option>
+                                            <option value="3">Rizwan        | GGM</option>
+                                            <option value="4">Sharjeel Khan | HOD</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">In-Direct</label>
+                                    <label class="col-sm-3 col-form-label">Report In-Direct</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control js-example-basic-single" style="width:100%">
-                                            <option value="AL">Hafiz Murtaza | HOD</option>
-                                            <option value="WY">Raheel        | PGM</option>
-                                            <option value="AM">Rizwan        | GGM</option>
-                                            <option value="CA">Sharjeel Khan | HOD</option>
+                                        <select class="form-control js-example-basic-single" style="width:100%" name="ReportIn-Direct">
+                                            <option value="1">Hafiz Murtaza | HOD</option>
+                                            <option value="2">Raheel        | PGM</option>
+                                            <option value="3">Rizwan        | GGM</option>
+                                            <option value="4">Sharjeel Khan | HOD</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Status</label>
-                                    <div class="col-sm-3">
-                                        <div class="form-check">
-                                            <label class="form-check-label form-check-success">
-                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked> Active
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-check form-check-danger">
-                                            <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2"> In-Active
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--<div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Status</label>
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                            <label class="form-check-label form-check-success">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked> Active
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-check form-check-danger">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2"> In-Active
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
                             <div class="col-md-6">
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label"></label>

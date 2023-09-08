@@ -8972,6 +8972,11 @@ progress {
   font-size: 0.875em;
   color: #6c757d; }
 
+select {
+    border:0.5px solid;
+    border-color:black;
+}
+
 .form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .typeahead,
 .tt-query,
@@ -20107,8 +20112,8 @@ div.tagsinput {
         display: none; }
         .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {
           width: calc(70px - 50px);
-          max-width: 100%;
-          height: 28px;
+          width: 80%;
+          height: 50px;
           margin: auto; }
   .navbar .navbar-menu-wrapper {
     transition: width 0.25s ease;
@@ -20384,16 +20389,16 @@ div.tagsinput {
         color: #252b3e; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand img {
         width: calc(244px - 120px);
-        max-width: 100%;
-        height: 28px;
+        width: 85%;
+        height: 56px;
         margin: auto;
         vertical-align: middle; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini {
         display: none; }
         .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img {
           width: calc(70px - 50px);
-          max-width: 100%;
-          height: 28px;
+          width: 100%;
+          height: 50px;
           margin: auto; }
   .sidebar .nav {
     overflow: hidden;

@@ -7,75 +7,45 @@
 
 <div class="main-panel">
     <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">Division \ Department \ Designation</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Designation</h4>
-                        <p class="card-description"></p>
-                        <form class="forms-sample">
-                            <div class="form-group row">
-                                <label for="exampleInputUsername2" class="col-sm-1 col-form-label">Name</label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" id="divisionNameId" placeholder="Designation Name">
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary me-2">Submit</button>
-                            <button class="btn btn-dark">Cancel</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Records</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="card-title">Designation</h4>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="/DesignationReg" class="btn btn-danger me-2">
+                                <span class="menu-icon">
+                                    <i class="mdi mdi-plus"></i>
+                                </span> Designation
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>User</th>
-                                    <th>Product</th>
-                                    <th>Sale</th>
-                                    <th>Status</th>
+                                    <th style="width: 130px; text-align: center;">S.No.</th>
+                                    <th>Designation</th>
+                                    <th style="width: 100px; text-align: center;">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for item in desig %}
                                 <tr>
-                                    <td>Jacob</td>
-                                    <td>Photoshop</td>
-                                    <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-danger">Pending</label></td>
+                                    <td style="text-align:center;">{{item.Id}}</td>
+                                    <td>{{item.Designation}}</td>
+                                    <td style="text-align:center;">
+                                        <a href="{% url 'edit_designation' item.Id %}">
+                                            <span class="menu-icon">
+                                                <i class="mdi mdi mdi-border-color"></i>
+                                            </span>
+                                        </a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Messsy</td>
-                                    <td>Flash</td>
-                                    <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
-                                <tr>
-                                    <td>John</td>
-                                    <td>Premier</td>
-                                    <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
-                                    <td><label class="badge badge-info">Fixed</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Peter</td>
-                                    <td>After effects</td>
-                                    <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
-                                    <td><label class="badge badge-success">Completed</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Dave</td>
-                                    <td>53275535</td>
-                                    <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
-                                    <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
@@ -86,8 +56,13 @@
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright HMC 2021</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="#" target="_blank">Bootstrap admin template</a> from HMC</span>
+        </div>
+    </footer>
     <!-- partial -->
-
 </div>
 
 {% endblock  %}
